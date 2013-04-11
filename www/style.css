@@ -1,0 +1,558 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('BebasNeue-webfont.eot');
+    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BebasNeue-webfont.woff') format('woff'),
+         url('BebasNeue-webfont.ttf') format('truetype'),
+         url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OrbitronMedium';
+    src: url('fonts/orbitron-medium-webfont.eot');
+    src: url('fonts/orbitron-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/orbitron-medium-webfont.woff') format('woff'),
+         url('fonts/orbitron-medium-webfont.ttf') format('truetype'),
+         url('fonts/orbitron-medium-webfont.svg#OrbitronMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuicksandLight';
+    src: url('fonts/Quicksand_Light-webfont.eot');
+    src: url('fonts/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Quicksand_Light-webfont.woff') format('woff'),
+         url('fonts/Quicksand_Light-webfont.ttf') format('truetype'),
+         url('fontsQuicksand_Light-webfont.svg#QuicksandLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#wijlinechart {     
+	background:#161616 !important;
+	color: #0088FF;  
+	position:absolute;
+	z-index:3000;
+	margin-top:50px;
+	left:8px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin:0;
+	padding:0;
+}
+		 
+
+
+/*****************************************Home Page***************************************************/
+
+#home{
+	background-image:url(images/dark_bg.png);
+	background-repeat: no-repeat;
+ 	background-position: center center;
+ 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover; 
+}
+
+#start_home_btn{
+	width: 90%;
+    margin: 0px auto;
+	margin-top:20px;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	zoom:200%;
+	height:20px;
+}
+
+#quick_start_btn{
+	width: 90%;
+    margin: 0px auto;
+	margin-top:20px;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	zoom:200%;
+	height:20px;
+}
+
+#intro_btn{
+	width: 90%;
+    margin: 0px auto;
+	margin-top:20px;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	zoom:200%;
+	height:20px;
+}
+
+
+
+/*******************************************Intro*****************************************************/
+
+#intro{
+	background-image:url(images/dark_bg.png);
+	background-repeat: no-repeat;
+ 	background-position: center center;
+ 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover; 
+}
+
+#intro_header{
+	background:#000;
+}
+
+#stepOne{
+	top:0;
+	left:0;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#stepOneContent{
+	top:0;
+	left:0;
+	font-size:4em;
+	color:#B1B1B1;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#next_container{
+    background: url(images/next_1.png) no-repeat top center;
+    height: 100px;
+    width: 100px;
+}
+
+#ui-icon-myapp-email {
+	background-image: url("images/next_1.png");
+}
+
+#goNext{
+	height:50px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#nextText{
+	margin-top:-5px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/*******************************************Step2*****************************************************/
+
+#step2{
+	background-image:url(images/dark_bg.png);
+	background-repeat: no-repeat;
+ 	background-position: center center;
+ 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover; 
+}
+
+#stepTwo{
+	top:0;
+	left:0;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#next_container{
+    background: url(images/next_1.png) no-repeat top center;
+    height: 100px;
+    width: 100px;
+}
+
+#ui-icon-myapp-email {
+	background-image: url("images/next_1.png");
+}
+
+#goNext{
+	height:50px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#nextText{
+	margin-top:-5px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/*******************************************Step3*****************************************************/
+
+#step3{
+	background-image:url(images/dark_bg.png);
+	background-repeat: no-repeat;
+ 	background-position: center center;
+ 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover; 
+}
+
+#stepThree{
+	top:0;
+	left:0;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#next_container{
+    background: url(images/next_1.png) no-repeat top center;
+    height: 100px;
+    width: 100px;
+}
+
+#ui-icon-myapp-email {
+	background-image: url("images/next_1.png");
+}
+
+#goNext{
+	height:50px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#nextText{
+	margin-top:-5px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/******************************************Quick Start************************************************/
+
+#quick_start{
+	background-image:url(images/dark_bg.png);
+	background-repeat: no-repeat;
+ 	background-position: center center;
+ 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover; 
+}
+
+#qs_content{
+	margin-top:-65px;
+}
+
+
+#qs_header{
+	position:absolute;
+	z-index:9;
+	width:100%;
+	background:#000;
+}
+
+#start_btn{
+	position:absolute;
+	height:100%;
+  	width:100%;
+	left: 0;
+  	top: 0;
+	opacity:0;
+	z-index:25;
+}
+
+#stop_btn{
+	position:absolute;
+	height:100%;
+  	width:100%;
+	left: 0;
+  	top: 0;
+	opacity:0;
+	z-index:25;
+}
+
+#start{
+	position: absolute;
+  	left: 0;
+  	margin-top: 100px;
+  	z-index:15;
+	font-size:5em;
+	width: 100%; 
+ 	text-align:center;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#stop{
+	position: absolute;
+  	left: 0;
+  	margin-top: 100px;
+  	z-index:15;
+	font-size:5em;
+	width: 100%; 
+ 	text-align:center;
+	color:#AE65BE;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#repetitions_header{
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	margin-top:160px;
+	left:0;
+	position: absolute;
+	z-index:20;
+	font-size:2.25em;
+	width: 100%; 
+	text-align:center;
+	color:#4F4F4F;
+}
+
+#repetitions_count{
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	margin-top:170px;
+	left:0;
+	position: absolute;
+	z-index:20;
+	font-size:7em;
+	width: 100%; 
+	text-align:center;
+	color:#919191;
+}
+
+#results{
+	margin-top:325px;
+	position: absolute;
+	z-index:1500;
+	width: 90%; 
+}
+
+#popupPanel-popup {
+    bottom: 0 !important;
+    top: auto !important;
+}
+#popupPanel {
+    width: 300px;
+    border: 1px solid #06a4fc;
+    background: rgba(0,0,0,.8);
+    margin: -1px 0;
+	height:390px;
+}
+#popupPanel .ui-btn {
+    margin: 2em 15px;
+}
+
+#timer_header{
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	margin-top:285px;
+	left:0;
+	position: absolute;
+	z-index:20;
+	font-size:2.25em;
+	width: 100%; 
+	text-align:center;
+	color:#4F4F4F;
+}
+
+#show_time{
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	margin-top:295px;
+	left:0;
+	position: absolute;
+	z-index:20;
+	font-size:7em;
+	width: 100%; 
+	text-align:center;
+	color:#919191;
+}
+
+#save_record{
+	margin: 0px auto;
+	margin-top:350px;
+	width:90%;
+}
+
+#see_record{
+	margin: 0px auto;
+	margin-top:10px;
+	width:90%;
+}
+
+#see_summary{
+	margin: 0px auto;
+	margin-top:10px;
+	width:90%;
+}
+
+/*****************************************Summary***************************************************/
+
+#summary{
+	background-image:url(images/dark_bg.png);
+	background-repeat: no-repeat;
+ 	background-position: center center;
+ 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover; 
+}
+
+#total{
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:1.5em;
+}
+
+#month{
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:1.5em;
+}
+
+#today{
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:1.5em;
+}
+
+#best_time_header{
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:1.5em;
+}
+
+#repetition_total{
+	color:#B1B1B1;
+	font-family: "OrbitronMedium", "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:3em;
+	display:inline;
+}
+
+
+#repetition_month_total{
+	color:#B1B1B1;
+	font-family: "OrbitronMedium", "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:3em;
+	display:inline;
+}
+
+#repetition_day_total{
+	color:#B1B1B1;
+	font-family: "OrbitronMedium", "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:3em;
+	display:inline;
+}
+
+
+
+#best_time{
+	color:#B1B1B1;
+	font-family: "OrbitronMedium", "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:2.5em;
+}
+
+#repHeading0{
+	
+	display:inline;
+	padding-left:7px;
+	font-size:1.5em;
+
+}
+
+
+#repHeading1{
+	display:inline;
+	padding-left:7px;
+	font-size:1.5em;
+
+}
+
+#repHeading2{
+	display:inline;
+	padding-left:7px;
+	font-size:1.5em;
+
+}
+
+.total_reps{
+	display:inline;
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.month_reps{
+	display:inline;
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.day_reps{
+	display:inline;
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.best_time_div{
+	display:inline;
+	color:#606060;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+
+/*******************************************Step2*****************************************************/
+
+#results_page{
+	background-image:url(images/dark_bg.png);
+	background-repeat: no-repeat;
+ 	background-position: center center;
+ 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover; 
+}
+
+#stepTwo{
+	top:0;
+	left:0;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#next_container{
+    background: url(images/next_1.png) no-repeat top center;
+    height: 100px;
+    width: 100px;
+}
+
+#ui-icon-myapp-email {
+	background-image: url("images/next_1.png");
+}
+
+#goNext{
+	height:50px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#nextText{
+	margin-top:-5px;
+	font-size:3em;
+	color:#06a4fc;
+	font-family: "BebasNeueRegular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}

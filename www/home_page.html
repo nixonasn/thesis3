@@ -1,0 +1,472 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+    "http://www.w3.org/TR/html4/strict.dtd">
+<head>
+
+
+<title>Physio Trek</title>
+<!--If this isn't sset, many mobile browsers will use a virtual width of around 900px, we want it to render at the actual device width-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="style_1.css" />-->
+<link rel="stylesheet" href="themes/main.css" />
+<!--
+<link rel="stylesheet" href="themes/a.min.css" />
+<link rel="stylesheet" href="themes/a.css" />
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>-->
+<script src="accel.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="jquery.sparkline.js"></script>
+
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <!-- The script below can be omitted -->
+  <script src="/resources/turnOffPushState.js"></script>
+  <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+
+
+
+</head>
+
+<body onLoad="accelerometer();hide_btn();graph()">
+
+<script>
+
+
+
+</script>
+
+
+<div data-role="page" id="home" data-theme="a">
+
+	    
+    <div data-role="content" data-theme="a" id="content">
+    
+    <a href="#start_home" data-role="button" data-theme="a" id="start_home_btn" style="text-align: left" data-transition="slide">Start / Continue Session</a><br>
+	<a href="#quick_start" data-role="button" data-theme="a" id="quick_start_btn" style="text-align: left" data-transition="slide">Quick Start</a>
+    <a href="#" data-role="button" data-theme="a" id="intro_btn" style="text-align: left" data-transition="slide" onClick="graph()">Intro / Settings</a>
+    <!--
+            <div style="text-align: center">
+            <canvas id="line1" width="450" height="200">[No canvas support]</canvas>
+        </div>-->
+
+
+	        <p id="graph_3">
+	<span class="dynamicsparkline">Loading..</span>
+	</p>
+    
+	<img src="images/bg.png" id="background_img">
+
+    </div><!--end of content div-->
+    
+    
+        <script>
+        CreateCharts = function ()
+        {
+            var line1 = new RGraph.Line('line1', [56,45,43,52,56,65,21,23,34,15], [35,43,41,41,42,46,42,39,46,41,45]);
+            line1.Set('chart.background.grid', true);
+            line1.Set('chart.linewidth', 5);
+            line1.Set('chart.gutter.left', 35);
+            line1.Set('chart.hmargin', 5);
+
+            if (!document.all || RGraph.isIE9up()) {
+                line1.Set('chart.shadow', true);
+            }
+            line1.Set('chart.tickmarks', null);
+            line1.Set('chart.units.post', 'k');
+            line1.Set('chart.colors', ['#06a4fc', '#e20ad8']);
+            line1.Set('chart.curvy', 1);
+            line1.Set('chart.labels',['1','2','3','4','5','6','7','8','9','10']);
+            line1.Set('chart.background.grid.hlines', false);
+            line1.Set('chart.background.grid.autofit.numvlines', 11);
+            line1.Set('chart.animation.unfold.initial', 0);
+            line1.Draw();
+
+        }
+        
+        if(!RGraph.isOld()) {
+            CreateCharts();
+        }else {
+            window.onload = CreateCharts;
+        }
+    </script>
+    
+    
+  
+</div><!--end of home page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="start_home" data-theme="a">
+	
+	<div data-role="header" data-theme="a" id="header_sh">
+    	<h1 id="start_session_text">Start Session</h1>
+        <a href="#home" data-role="button" data-theme="a" data-icon="arrow-l" id="start_home_header" data-transition="fade">Back</a>
+        <img src="images/header.png" id="header_img">
+    </div><!--end of header-->
+ 
+<div data-role="content" data-theme="a" id="content">
+	<a href="#set_goal" data-role="button" data-theme="a" data-icon="plus" id="set_goal_btn" data-iconpos="right" style="text-align: left" data-transition="fade">Set Goal</a>
+	<a href="#set_treatment" data-role="button" data-theme="a" data-icon="plus" id="set_treatment_btn" data-iconpos="right" style="text-align: left" data-transition="fade">Set Treatment</a>
+	<a href="#current_session" data-role="button" data-theme="a" data-icon="plus" id="current_session_btn" data-iconpos="right" style="text-align: left" data-transition="fade">Current Session</a>-->
+<img src="images/bg.png" id="background_img_start_home">
+    </div><!--end of content div-->
+  
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="quick_start" data-theme="a" onload="accelerometer();hide_btn()">
+
+
+	<div data-role="header" data-theme="a" id="header_qs">
+    	<h1 id="start_session_text">Quick Start</h1>
+        	<a href="#home" data-role="button" data-theme="a" data-icon="arrow-l" id="quick_start_header">Back</a>
+				<img src="images/header.png" id="header_img">
+    </div><!--end of header-->
+
+	<div data-role="content" data-theme="a" id="content">
+    
+	<p id="start_btn">START</p>
+	<p id="stop_btn">STOP</p>
+
+		<a href="" data-role="button" onclick="start_recording_quick_start();hide_btn()" id="start" value="Start"></a>
+			<a href="" data-role="button" onclick="stop_recording()" id="stop" value="Stop"></a>
+				<a href="#popupPanel" id="results" onclick="graph();hide_btn()" data-rel="popup" data-transition="slide" data-direction="bottom" data-position-to="window" data-role="button">Results</a>
+
+	<br>
+
+	<p id="repetitions_header">Repetitions:</p><br>
+		<p id="repetitions_count"></p><br>
+			<!--<p id="result_quick_start">adf</p><br>-->
+
+	<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+    	<a href="#quick_start" data-role="button" data-theme="a" data-icon="back" data-mini="true" data-rel="close">Back</a>
+
+	</div>
+
+	<img src="images/bg.png" id="background_img_quick_start">
+	</div><!-- end of content div-->
+   
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<div data-role="page" id="results" data-theme="a">
+
+	<div data-role="header" data-theme="a" id="header_results">
+    	<h1 id="results_text">Quick Start</h1>
+        <a href="#" data-role="button" data-theme="a" data-icon="arrow-l" id="results_header_btn">Back</a>
+		<img src="images/header.png" id="header_img">
+    </div><!--end of header-->
+
+    <div data-role="content" data-theme="a" id="content">
+
+	<img src="images/bg.png" id="background_img_results"> 
+    </div><!--end of content div-->
+    
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="step_one" data-theme="a">
+
+  <div data-role="header">
+    <h1>silentScroll() example</h1>
+  </div>
+  <div data-role="content">
+    <a href="#" onclick="$.mobile.silentScroll(100)" data-role="button">Go down 100 pixels</a>
+    <p> <br /><br />Here, we have some text so that we can have <br />
+    some vertical space in order to demonstrate <br />
+    the silentScroll() method. 
+
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ 
+
+
+
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied 
+
+    
+<br /><br /></p>	
+    <a href="#" onclick="$.mobile.silentScroll(0)" data-role="button">Back to Top</a>
+  </div>
+  <div data-role="footer">
+    <h4> </h4>
+  </div>
+ 
+</div>
+
+
+
+
+
+<!--
+	<div data-role="header" data-theme="a" id="header_intro">
+    	<h1 id="intro_header_text">Getting Started</h1>
+        	<a data-role="button" data-theme="a" href="#home" data-icon="arrow-l" class="ui-btn-left" id="intro_header_btn">Back</a>
+				<img src="header.png" id="header_img_intro">
+    </div><!--end of header-->
+<!--
+    <div data-role="content" data-theme="a" id="content">
+
+
+    
+    
+    	<img src="step_one.png" id="step_one">
+    		<a href="#step_two" data-transition="slide" id="next_href"><img src="next.png" id="next"></a>
+				<img src="intro_bg.png" id="intro_bg">
+    
+    </div><!--end of content div-->
+ <!--   
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="step_two" data-theme="a">
+
+	<div data-role="header" data-theme="a" id="header_intro">
+    	<h1 id="intro_header_text">Getting Started</h1>
+        	<a data-role="button" data-theme="a" href="#home" data-icon="arrow-l" class="ui-btn-left" id="intro_header_btn">Back</a>
+				<img src="images/header.png" id="header_img_intro">
+    </div><!--end of header-->
+
+    <div data-role="content" data-theme="a" id="content">
+    	<img src="step_one.png" id="step_one">
+    		<a href="#home" id="next" data-transition="slide"><img src="images/next.png"></a>
+    				<img src="images/intro_bg.png" id="intro_bg">
+    
+    </div><!--end of content div-->
+    
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="set_goal" data-theme="a" onload="accelerometer()">
+
+
+	<div data-role="header" data-theme="a" id="header_sg">
+    	<h1 id="set_goal_text">Set Goal</h1>
+        <a href="#home" data-role="button" data-theme="a" data-icon="arrow-l" id="set_goal_header">Back</a>
+		<img src="images/header.png" id="header_img_sg">
+    </div><!--end of header-->
+
+	<div data-role="content" data-theme="a" id="content">
+
+<p id="set_goal_start">START</p>
+<p id="set_goal_stop">STOP</p>
+
+
+
+<a href="" data-role="button" onclick="start_recording_set_goal()" id="start_recording_set_goal" value="Start"></a>
+<a href="" data-role="button" onclick="stop_recording()" id="stop_recording_set_goal" value="Stop"></a>
+
+<!--<a href="#" id="results" onClick="graph()">Results</a>-->
+
+<p id="data_header">Measurement:</p><br>
+<p id="set_goal_max_value"></p><br>
+
+<p id="time_header">Time:</p><br>
+<p id="set_goal_time_value"></p><br>
+
+	<img src="images/bg.png" id="background_img_set_goal">
+	</div><!-- end of content div-->
+   
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="set_treatment" data-theme="a">
+	
+	<div data-role="header" data-theme="a">
+    	<h1>Set Treatment</h1>
+        <a data-role="button" data-theme="a" href="#home" data-icon="arrow-l" class="ui-btn-left"></a>
+		<img src="images/header.png"/>
+    </div><!--end of header-->
+
+    <div data-role="content" data-theme="a" id="content">
+
+    
+    </div><!--end of content div-->
+    
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="current_session" data-theme="a">
+	
+	<div data-role="header" data-theme="a">
+    	<h1>Current Session</h1>
+        <a data-role="button" data-theme="a" href="#home" data-icon="arrow-l" class="ui-btn-left"></a>
+		<img src="images/header.png"/>
+    </div><!--end of header-->
+
+    <div data-role="content" data-theme="a" id="content">
+    
+    <a href="#record_data" data-role="button" data-theme="a" data-icon="plus" class="plus" data-iconpos="right" style="text-align: left">Start Recording</a><br>
+
+    </div><!--end of content div-->
+    
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="record_data" data-theme="a">
+
+	    <script type="text/javascript">
+
+       // $('body').click(function() {
+        // do something here like:
+    //    alert('hey! The body click is working!!!')
+   //   });
+
+
+
+
+        </script>
+
+	
+	<div data-role="header" data-theme="a">
+    	<h1>Current Session</h1>
+        <a data-role="button" data-theme="a" href="#home" data-icon="arrow-l" class="ui-btn-left"></a>
+		<img src="images/header.png"/>
+    </div><!--end of header-->
+
+    <div data-role="content" data-theme="a" id="content">
+    
+     <h3 id="time_header">Time</h3><br>
+    <h1 id="time"></h1><br>
+    <h3 id="speed_header">Speed</h3><br>
+    <h1 id="speed"></h1><br>
+    <h3 id="distance_header">Distance</h3>
+    <h1 id="distance"></h1><br>
+	<a href="#" data-role="button" data-theme="a" onClick="stop_accel()" style="text-align: left">Start Recording</a>
+    
+<div id="sphere"></div>
+
+test: <span id="test"></span>
+<!--<input type="button" onClick="accelerometer();displayDetails()" id="on_btn" value="Accelerometer On"/>
+<input type="button" onClick="displayDetails()" id="on_btn" value="Show details"/>-->
+
+
+<input type="button" onClick="start_recording()" id="start" value="Start"/>
+<input type="button" onClick="stop_recording()" id="stop" value="Stop"/>
+<input type="button" onClick="get_difference()" id="difference_btn" value="Difference"/>
+<input type="button" onClick="draw_graph()" id="draw_graph" value="Draw Graph"/>
+<input type="button" onClick="save()" id="save" value="Save"/>
+<a href="#" id="record" onClick="new_record()">Make New Record</a>
+
+<!--
+<input type="button" onClick="clear_data()" id="clear_data" value="Clear Data"/>
+<input type="button" onClick="results()" id="results" value="Last Results"/>
+
+
+
+
+<!--<button onclick="myFunction()">Try it</button>-->
+
+<h4 id="repetitions"></h4>
+<h2 id="start_array"></h2>
+<h2 id="stop_array"></h2>
+<h1 id="difference"></h1>
+
+<h1 id="getData"></h1>
+    </div><!--end of content div-->
+    
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="start_session" data-theme="a">
+	
+	<div data-role="header" data-theme="a">
+    	<h1>Start Session</h1>
+        <a data-role="button" data-theme="a" href="#set_goal" data-icon="arrow-l" class="ui-btn-left"></a>
+		<img src="images/header.png"/>
+    </div><!--end of header-->
+	
+    
+    
+    <a href="#start_session_1" data-role="button" data-theme="a" data-icon="plus" class="plus" data-iconpos="right" style="text-align: left">Set Goal</a><br>
+
+
+
+
+    
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="start_session_1" data-theme="a">
+	
+	<div data-role="header" data-theme="a">
+    	<h1>Start Session</h1>
+        <a data-role="button" data-theme="a" href="#home" data-icon="arrow-l" class="ui-btn-left"></a>
+		<img src="images/header.png"/>
+    </div><!--end of header-->
+
+    <div data-role="content" data-theme="a" id="content">
+    
+    <input type="text" minlength="3" />
+  
+
+    </div><!--end of content div-->
+    
+    
+    <div data-role="footer" data-theme="a" data-position="fixed">
+   		<nav data-role="navbar">
+        	<ul>
+            <li><a href="#" data-icon="Cancel">Cancel</a></li>
+            <li><a href="#" data-icon="Save">Save</a></li>
+            </ul>
+        </nav>
+   </div><!--end of footer tag-->
+    
+</div><!--end of start page-->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="aaa" data-theme="a">
+<!-- <div data-role="content">
+    
+   <input type="text" id="buttonText" placeholder="Enter Button Name"/>
+    <input type="button" id="createButton" value="Create Button" />
+    <div id="buttonPlaceHolder">&nbsp;</div>
+    
+</div>-->
+
+    <a href="#home" id="next" data-transition="slide"><img src="images/next.png"></a>
+
+<script>
+
+//$('#createButton').bind('click', function() {
+ //   $('#buttonPlaceHolder').append('<a href="#" data-role="button">'+$('#buttonText').val()+'</a>');
+    
+    // refresh jQM controls
+	//$("#list").listview("refresh");
+
+ //   $('#buttonPlaceHolder').trigger('create');
+//});
+
+</script>
+
+</div>
+
+
+</body>
+</html>
